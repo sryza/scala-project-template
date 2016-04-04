@@ -1,0 +1,11 @@
+.classpath
+.project
+.settings
+.cache
+target
+*.iml
+.idea
+scalastyle-output.xml
+*.pyc
+*.swp
+*.log

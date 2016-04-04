@@ -1,0 +1,11 @@
+language: java
+sudo: false
+jdk: oraclejdk8
+install: mvn ${SPARK} ${SCALA} -Dmaven.javadoc.skip=true -DskipTests=true -B -V -Dgpg.skip=true install
+script: mvn ${SPARK} ${SCALA} -Dmaven.javadoc.skip=true -q -B -Dgpg.skip=true verify
+env:
+  global:
+    - MAVEN_OPTS=-Xmx2g
+cache:
+  directories:
+    - $HOME/.m2
